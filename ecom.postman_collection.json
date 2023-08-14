@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "bf3645a7-4592-4a72-975c-ade0392876a8",
+		"name": "ecom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23577485"
+	},
+	"item": [
+		{
+			"name": "listproduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "createproduct",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "iPhone 11 Pro Max",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "This is testing device.",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "60000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "getproduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/products/2"
+			},
+			"response": []
+		},
+		{
+			"name": "userlogin",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "Application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "greg@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userregister",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accect",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Alestir cook",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "alestier@test.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/register"
+			},
+			"response": []
+		},
+		{
+			"name": "updateproduct",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "iPhone 13 Pro Max",
+							"type": "text"
+						},
+						{
+							"key": "detail",
+							"value": "This is testing device.",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "120000",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/productsupdate/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"productsupdate",
+						"2"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteproduct",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/productsdelete/4"
+			},
+			"response": []
+		},
+		{
+			"name": "cart",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "invoice",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
